@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - Coffee Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/customerDashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/customerDashboard.html" id="profileLink">Profile</a>
+            <a href="login.html" id="logoutLink">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Welcome, <span id="customerName"></span></h2>
+            
+            <div class="dashboard-grid">
+                <!-- User Details Section -->
+                <div class="dashboard-section">
+                    <h3>User Details</h3>
+                    <div class="user-details">
+                        <p>First Name: <span id="userFirstName"></span></p>
+                        <p>Last Name: <span id="userLastName"></span></p>
+                        <p>Address: <span id="userAddress"></span></p>
+                        <p>Email: <span id="userEmail"></span></p>
+                    </div>
+                </div>
+
+                <!-- Loyalty Points Section -->
+                <div class="dashboard-section">
+                    <h3>Loyalty Program</h3>
+                    <div class="loyalty-info">
+                        <div class="points-section">
+                            <p>Your Points: <span id="loyaltyPoints">0</span></p>
+                            <p>Next Reward at: <span id="nextReward">100</span> points</p>
+                        </div>
+                        <div class="rewards-section">
+                            <p>Available Discount: $<span id="availableDiscount">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="discount-note">Every 100 points = $25 discount</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/customerDashboard.js"></script>
+</body>
+</html>

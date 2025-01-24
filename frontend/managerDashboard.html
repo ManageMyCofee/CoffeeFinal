@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - Coffee Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboards.css">
+    <base href="/assets/images/">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/managerDashboard.html">Dashboard</a>
+            <a href="/" id="logoutLink">Logout</a>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <h2>Welcome, Manager</h2>
+        
+        <!-- Sales Overview Section -->
+        <div id="salesMetrics"></div>
+        
+        <div class="dashboard-options">
+            <!-- Inventory Management -->
+            <div class="dashboard-section">
+                <h3>Inventory Management</h3>
+                <div class="card" id="manageInventoryCard">
+                    <img src="inventory.png" alt="Manage Inventory">
+                    <div class="card-content">
+                        <h4>Manage Inventory</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shifts Management -->
+            <div class="dashboard-section">
+                <h3>Shifts Management</h3>
+                <div class="card" id="shiftsManagementCard">
+                    <img src="calendar.png" alt="Manage Shifts">
+                    <div class="card-content">
+                        <h4>Manage Shifts</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add New Employee -->
+            <div class="dashboard-section">
+                <h3>Add New Employee</h3>
+                <div class="card" id="addEmployeeCard">
+                    <img src="employee.png" alt="Add Employee">
+                    <div class="card-content">
+                        <h4>Add Employee</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/managerDashboard.js"></script>
+</body>
+</html>

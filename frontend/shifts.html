@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifts Management</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <base href="/assets/images/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/employeeDashboard.html" id="employeeDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/managerDashboard.html" id="managerDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/" id="logoutLink">Logout</a>
+        </div>
+    </nav>
+
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prevMonth">&lt; Previous</button>
+            <h2 id="currentMonth">January 2024</h2>
+            <button id="nextMonth">Next &gt;</button>
+        </div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+
+    <div class="container" id="addShiftForm" style="display: none;">
+        <div class="card">
+            <h3>Add New Shift</h3>
+            <form id="shiftForm">
+                <div class="form-group">
+                    <label for="employeeSelect">Select Employee:</label>
+                    <select id="employeeSelect" required>
+                        <!-- Will be populated dynamically -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shiftDate">Date:</label>
+                    <input type="date" id="shiftDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="startTime">Start Time:</label>
+                    <input type="time" id="startTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="endTime">End Time:</label>
+                    <input type="time" id="endTime" required>
+                </div>
+                
+                <button type="submit" class="style-button">
+                    Add Shift
+                    <div id="spinner" class="spinner" style="display: none;"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/shifts.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/inventory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/managerDashboard.html" id="managerDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/employeeDashboard.html" id="employeeDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/" id="logoutLink">Logout</a>
+
+        </div>
+    </nav>
+    <div class="inventory-container">
+        <div class="page-header">
+            <h2 class="page-title">Inventory Management</h2>
+            <button id="addItemBtn" class="add-item-btn">
+                <i class="fas fa-plus"></i>
+                Add New Item
+            </button>
+        </div>
+        
+        <div class="inventory-card">
+            <table id="inventoryList">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Add Item Modal -->
+        <div id="addItemForm" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Add New Item</h3>
+                    <button class="close-btn" onclick="closeModal('addItemForm')">&times;</button>
+                </div>
+                <div class="form-group">
+                    <label>Item Name:</label>
+                    <input type="text" id="itemName" required>
+                </div>
+                <div class="form-group">
+                    <label>Quantity:</label>
+                    <input type="number" id="itemQuantity" required>
+                </div>
+                <div class="form-group">
+                    <label>Minimum Quantity:</label>
+                    <input type="number" id="itemMinQuantity" required>
+                </div>
+                <div class="form-group">
+                    <label>Unit Price:</label>
+                    <input type="number" id="itemPrice" step="0.01" required>
+                </div>
+                <button id="saveItemBtn" class="form-add-item-btn">Save Item</button>
+            </div>
+        </div>
+
+        <!-- Edit Item Modal -->
+        <div id="editItemForm" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Edit Item</h3>
+                    <button class="close-btn" onclick="closeModal('editItemForm')">&times;</button>
+                </div>
+                <div class="form-group">
+                    <label>Item Name:</label>
+                    <input type="text" id="editItemName" required>
+                </div>
+                <div class="form-group">
+                    <label>Quantity:</label>
+                    <input type="number" id="editItemQuantity" required>
+                </div>
+                <div class="form-group">
+                    <label>Minimum Quantity:</label>
+                    <input type="number" id="editItemMinQuantity" required>
+                <div class="form-group">
+                    <label>Unit Price:</label>
+                    <input type="number" id="editItemPrice" step="0.01" required>
+                </div>
+                <button id="updateItemBtn" class="form-add-item-btn">Update Item</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="js/inventory.js"></script>
+</body>
+</html>

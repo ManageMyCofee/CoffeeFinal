@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Coffee Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="auth-section">
+        <nav class="navbar">
+            <div class="nav-brand">Coffee Shop</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/cart.html" id="cartLink">Shopping Cart</a>
+                <a href="/login.html" id="loginLink">Login</a>
+                <a href="/customerRegister.html" id="registerLink">Register</a>
+                <a href="/managerDashboard.html" id="managerDashboardLink" style="display: none;">Dashboard</a>
+                <a href="/customerDashboard.html" id="profileLink" style="display: none;">Profile</a>
+                <a href="/employeeDashboard.html" id="employeeDashboardLink" style="display: none;">Dashboard</a>
+                <a href="/" id="logoutLink" style="display: none;">Logout</a>
+
+            </div>
+        </nav>
+            
+        <div class="container">
+            <div class="card">
+                <h2>Welcome Back</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+                    <button class="style-button" type="submit">
+                        Login
+                    </button>
+                    <div class="link">
+                        Don't have an account? <a href="customerRegister.html">Register here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>  
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

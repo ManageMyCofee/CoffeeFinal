@@ -1,0 +1,190 @@
+.inventory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 60%;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column; /* Change to column to stack elements vertically */
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.inventory-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+#inventoryList {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#inventoryList thead {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+#inventoryList th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+#inventoryList td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+#inventoryList tbody tr:hover {
+    background-color: #f8f8f8;
+}
+
+.add-item-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: transform 0.2s;
+    margin-top: 1rem;
+    width: 25%;
+}
+.form-add-item-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: transform 0.2s;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.form-add-item-btn:hover {
+    transform: translateY(-2px);
+}
+.add-item-btn:hover {
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    width: 60px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(111, 78, 55, 0.1);
+}
+
+.action-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0rem;
+    transition: transform 0.2s;
+}
+
+.edit-button {
+    color: var(--primary-color);
+}
+
+.remove-button {
+    color: #dc3545;
+}
+
+.action-buttons button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}

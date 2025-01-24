@@ -1,0 +1,29 @@
+{
+  "name": "coffeshop",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@mailchimp/mailchimp_transactional": "^1.0.59",
+    "@sendgrid/mail": "^8.1.4",
+    "@vonage/server-sdk": "^3.19.2",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
+    "googleapis": "^144.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.4",
+    "nodemailer": "^6.9.16",
+    "resend": "^4.0.1-alpha.0",
+    "twilio": "^5.3.5"
+  }
+}

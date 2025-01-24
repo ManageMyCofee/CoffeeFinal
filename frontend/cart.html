@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Coffee Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/login.html" id="loginLink">Login</a>
+            <a href="/customerRegister.html" id="registerLink">Register</a>
+            <a href="/managerDashboard.html" id="managerDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/customerDashboard.html" id="profileLink" style="display: none;">Profile</a>
+            <a href="/cart.html" id="cartLink" style="display: none;">Cart</a>
+            <a href="/employeeDashboard.html" id="employeeDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/" id="logoutLink" style="display: none;">Logout</a>
+        </div>
+    </nav>
+
+    <main class="cart-container">
+        <h1>Your Shopping Cart</h1>
+        
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="cart-summary">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+        </div>
+
+        <!-- Guest checkout form -->
+        <div class="container" id="guestCheckoutForm"  style="display: none;">
+            <div class="card">
+                <h2>Guest Checkout</h2>
+                <form id="guestForm">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <textarea id="city" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address:</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    <button type="submit" class="style-button">Place Order</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="cart-actions" id="initialActions">
+            <button id="continueShoppingBtn" class="secondary-btn">
+                <i class="fas fa-arrow-left"></i> Continue Shopping
+            </button>
+            <button id="checkoutBtn" class="primary-btn">
+                <i class="fas fa-shopping-cart"></i> Proceed to Checkout
+            </button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html>

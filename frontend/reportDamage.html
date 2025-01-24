@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Damage</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/employeeDashboard.html">Dashboard</a>
+            <a href="/" id="logoutLink">Logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card">
+
+            <h2>Report Damage</h2>
+            <form id="reportDamageForm">
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="reportText">Report Text:</label>
+                    <textarea id="reportText" name="reportText" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="managerEmail">Report To:</label>
+                    <select id="managerEmail" name="managerEmail" required>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <button class="style-button" type="submit">
+                    Submit
+                    <div id="spinner" class="spinner" style="display: none;"></div>
+                </button>
+            </form>
+        </div> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="js/reportDamage.js"></script>
+</body>
+</html>

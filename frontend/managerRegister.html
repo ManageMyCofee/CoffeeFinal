@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="auth-section">
+        <nav class="navbar">
+            <div class="nav-brand">Coffee Shop</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/cart.html" id="cartLink">Shopping Cart</a>
+                <a href="/login.html" id="loginLink">Login</a>
+                <a href="/customerRegister.html" id="registerLink">Register</a>
+                <a href="/managerDashboard.html" id="managerDashboardLink" style="display: none;">Dashboard</a>
+                <a href="/customerDashboard.html" id="profileLink" style="display: none;">Profile</a>
+                <a href="/employeeDashboard.html" id="employeeDashboardLink" style="display: none;">Dashboard</a>
+                <a href="/" id="logoutLink" style="display: none;">Logout</a>
+
+            </div>
+        </nav>
+        <div class="container">
+            <div class="card">
+                <h2>Manager Register</h2>
+                <form id="managerRegisterForm">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button class="style-button" type="submit">Register</button>
+                </form>
+                <div class="link">
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <base href="/assets/images/">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/cart.html" id="cartLink">Shopping Cart</a>
+            <a href="/login.html" id="loginLink">Login</a>
+            <a href="/customerRegister.html" id="registerLink">Register</a>
+            <a href="/managerDashboard.html" id="managerDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/customerDashboard.html" id="profileLink" style="display: none;">Profile</a>
+            <a href="/employeeDashboard.html" id="employeeDashboardLink" style="display: none;">Dashboard</a>
+            <a href="/" id="logoutLink" style="display: none;">Logout</a>
+
+        </div>
+    </nav>
+
+    <main class="hero">
+        <h1>Welcome to Our Coffee Shop</h1>
+        <p>Experience the finest coffee and exceptional service</p>
+    </main>
+
+    <section class="products">
+        <h2>Our Coffee Beans</h2>
+        <div class="product-list" id="productList">
+            <div class="product">
+                <img src="item1.jpeg" alt="Arabica" class="product-image">
+                <h3>Arabica</h3>
+                <p>Price: $10.99</p>
+                <label for="quantity-1">Quantity:</label>
+                <input type="number" id="quantity-1" name="quantity" min="1" value="1">
+                <button onclick="addToBasket(1)">Add to Basket</button>
+            </div>
+            <div class="product">
+                <img src="item2.jpeg" alt="Robusta" class="product-image">
+                <h3>Robusta</h3>
+                <p>Price: $8.99</p>
+                <label for="quantity-2">Quantity:</label>
+                <input type="number" id="quantity-2" name="quantity" min="1" value="1">
+                <button onclick="addToBasket(2)">Add to Basket</button>
+            </div>
+            <div class="product">
+                <img src="item3.jpeg" alt="Liberica" class="product-image">
+                <h3>Liberica</h3>
+                <p>Price: $12.99</p>
+                <label for="quantity-3">Quantity:</label>
+                <input type="number" id="quantity-3" name="quantity" min="1" value="1">
+                <button onclick="addToBasket(3)">Add to Basket</button>
+            </div>
+            <div class="product">
+                <img src="item4.jpeg" alt="Excelsa" class="product-image">
+                <h3>Excelsa</h3>
+                <p>Price: $11.99</p>
+                <label for="quantity-4">Quantity:</label>
+                <input type="number" id="quantity-4" name="quantity" min="1" value="1">
+                <button onclick="addToBasket(4)">Add to Basket</button>
+            </div>
+            <div class="product">
+                <img src="item5.jpeg" alt="Typica" class="product-image">
+                <h3>Typica</h3>
+                <p>Price: $9.99</p>
+                <label for="quantity-5">Quantity:</label>
+                <input type="number" id="quantity-5" name="quantity" min="1" value="1">
+                <button onclick="addToBasket(5)">Add to Basket</button>
+            </div>
+            <div class="product">
+                <img src="item6.jpeg" alt="Geisha" class="product-image">
+                <h3>Geisha</h3>
+                <p>Price: $13.99</p>
+                <label for="quantity-6">Quantity:</label>
+                <input type="number" id="quantity-6" name="quantity" min="1" value="1">
+                <button onclick="addToBasket(6)">Add to Basket</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="basket">
+        <h2>Your Basket</h2>
+        <div id="basketItems">
+            <!-- Basket items will be dynamically added here -->
+        </div>
+        <button id="placeOrderButton">
+            Place Order
+            <i id="checkoutSpinner" class="fas fa-spinner fa-spin" style="display: none;"></i>
+        </button>
+        <button id="checkoutButton" style="display: none;">
+            Checkout
+        </button>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/products.js"></script>
+</body>
+</html>

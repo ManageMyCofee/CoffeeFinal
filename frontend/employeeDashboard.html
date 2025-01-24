@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - Coffee Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboards.css">
+    <base href="/assets/images/">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Coffee Shop</div>
+        <div class="nav-links">
+            <a href="/employeeDashboard.html">Dashboard</a>
+            <a href="/" id="logoutLink">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h2>Welcome, Employee</h2>
+        
+        
+        <div id="shiftsMetrics"></div>
+        
+        <div class="dashboard-options">
+            <!-- Inventory Management -->
+            <div class="dashboard-section">
+                <h3 style="text-align: center;">Inventory Management</h3>
+                <div id="inventoryManagement">
+                    <div class="card" id="manageInventoryCard">
+                        <img src="inventory.png" alt="Manage Inventory">
+                        <div class="card-content">
+                            <h4>Inventory</h4>
+                        </div>
+                    </div>
+                    <div id="inventoryList"></div>
+                </div>
+            </div>
+
+            <!-- Shifts Management -->
+            <div class="dashboard-section">
+                <h3 style="text-align: center;">Shifts</h3>
+                <div id="shifts">
+                    <div class="card" id="shiftsCard">
+                        <img src="calendar.png" alt="Shifts">
+                        <div class="card-content">
+                            <h4>My Shifts</h4>
+                        </div>
+                    </div>
+                    <div id="shiftsList"></div>
+                </div>
+            </div>
+
+            <!-- report damage -->
+            <div class="dashboard-section">
+                <h3 style="text-align: center;">Report Damage</h3>
+                <div id="reportDamage">
+                    <div class="card" id="reportDamageCard">
+                        <img src="damage.png" alt="Report Damage">
+                        <div class="card-content">
+                            <h4>Report Damage</h4>
+                        </div>
+                    </div>
+                    <div id="reportDamageList"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/employeeDashboard.js"></script>
+</body>
+</html>
